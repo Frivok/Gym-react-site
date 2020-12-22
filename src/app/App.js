@@ -3,10 +3,12 @@ import "./App.css";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Header from "../components/Header";
 import Tarifs from "../components/Tarifs";
-import Container from "@material-ui/core/Container/Container";
+import Team from "../components/Team";
 import { makeStyles } from "@material-ui/core/styles";
+import { TrainerCard } from "./../components/Team";
+import DataTeam from "./../data/team";
 
-const appStyles = makeStyles({
+const trainerStyles = makeStyles({
   content: {
     margin: "5px",
     padding: "15px",
@@ -14,7 +16,7 @@ const appStyles = makeStyles({
 });
 
 function App() {
-  const appStyle = appStyles();
+  const appStyle = trainerStyles();
 
   return (
     <Router>
@@ -25,7 +27,9 @@ function App() {
           <Route exact path="/tarifs">
             <Tarifs />
           </Route>
-
+          <Route path="/equipe">
+            <Team />
+          </Route>
           <Route path="/">
             <div>Hello World!</div>
           </Route>

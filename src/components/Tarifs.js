@@ -39,29 +39,31 @@ const cardStyles = makeStyles((theme) => ({
 }));
 
 export function TarifCard(props) {
-  const { title, subTitle, description, pricing, color, textColor } = props;
+  const { title, description, pricing, color, textColor } = props;
 
   const styles = cardStyles({ bgColor: color, textColor: textColor });
 
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} variant="outlined">
       <CardActionArea>
         <CardMedia className={styles.cardMedia} />
         <CardContent className={styles.cardContent}>
-          <Typography variant="h5" component="h2">
+          <Typography variant="h5" component="span">
             {title}
           </Typography>
-          <Typography gutterBottom>{subTitle}</Typography>
           <Divider />
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="span">
             {description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Divider />
-        {pricing.map((p) => (
-          <Chip className={styles.chips} label={`${p.price}€ /${p.period}`} />
+        {pricing.map((prop) => (
+          <Chip
+            className={styles.chips}
+            label={`${prop.price}€ /${prop.period}`}
+          />
         ))}
       </CardActions>
     </Card>
@@ -70,7 +72,6 @@ export function TarifCard(props) {
 
 TarifCard.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   pricing: PropTypes.array.isRequired,
   color: PropTypes.string.isRequired,
@@ -90,7 +91,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography component={"span"}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -103,6 +104,7 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
+//tab stuff
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -114,7 +116,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#212121",
   },
 }));
 
@@ -207,7 +208,7 @@ export function Tarifs() {
         </Grid>
       </TabPanel>
       <div className="Typo">
-        <Typography variant="h6">
+        <Typography component={"span"} variant="h6">
           Badge d'entrée 10 euros. Votre forfait comprend : - L'utilisation des
           2 salles - L'utilisation de toutes les machines de 6H à 23H et 7 jours
           sur 7 - La possibilité de participer à tous les cours collectifs à
@@ -216,7 +217,7 @@ export function Tarifs() {
           votre démarche - Une écoute - Des conseils - Il est reconduit
           automatiquement, sauf avis contraire de votre part :-)
         </Typography>
-        <Typography variant="h6">
+        <Typography component={"span"} variant="h6">
           Pour les forfaits annuels et semestriels, un premier versement à
           l'inscription en chèque ou carte bancaire et le reste par prélèvement
           ou chèque (ou paiement comptant)

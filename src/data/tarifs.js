@@ -1,12 +1,10 @@
 const DataTarifs = {
   annual: [
     {
-      title: "Week-End",
-      subTitle:
-        "Pour les forfaits annuels et semestriels, un premier versement à l'inscription en chèque ou carte bancaire et le reste par prélèvement ou chèque (ou paiement comptant)",
+      title: "Forfait Week-End",
       description:
         "Pour profiter des 2 salles du samedi 6h00 au dimanche 23h00",
-      color: "#ffd700",
+      color: "#b78b1b",
       textColor: "#000000",
       pricing: [
         {
@@ -20,11 +18,9 @@ const DataTarifs = {
       ],
     },
     {
-      title: "Standard",
-      subTitle:
-        "Pour les forfaits annuels et semestriels, un premier versement à l'inscription en chèque ou carte bancaire et le reste par prélèvement ou chèque (ou paiement comptant)",
+      title: "Forfait Standard",
       description: "Pour profiter des deux salles en illimité, 6h-23h, 7j/7",
-      color: "#ffd700",
+      color: "#b78b1b",
       textColor: "#000000",
       pricing: [
         {
@@ -38,11 +34,9 @@ const DataTarifs = {
       ],
     },
     {
-      title: "Couple",
-      subTitle:
-        "Pour les forfaits annuels et semestriels, un premier versement à l'inscription en chèque ou carte bancaire et le reste par prélèvement ou chèque (ou paiement comptant)",
+      title: "Forfait Couple",
       description: "Pour profiter des deux salles en illimité, 6h-23h, 7j/7",
-      color: "#ffd700",
+      color: "#b78b1b",
       textColor: "#000000",
       pricing: [
         {
@@ -56,11 +50,10 @@ const DataTarifs = {
       ],
     },
     {
-      title: "Associations Sportives",
-      subTitle: "Pour les deglingo du sport",
+      title: "Forfait Associations Sportives",
       description:
         "Adhérent d'une association sportive Airoise ou Lilleroise et sur présentation de votre licence",
-      color: "#ffd700",
+      color: "#b78b1b",
       textColor: "#000000",
       pricing: [
         {
@@ -74,10 +67,9 @@ const DataTarifs = {
       ],
     },
     {
-      title: "Etudiant",
-      subTitle: "Pour les nerds",
+      title: "Forfait Etudiant",
       description: "Sur presentation d'une carte etudiant",
-      color: "#ffd700",
+      color: "#b78b1b",
       textColor: "#000000",
       pricing: [
         {
@@ -93,8 +85,7 @@ const DataTarifs = {
   ],
   semestrial: [
     {
-      title: "Standard",
-      subTitle: "Pour les crevards",
+      title: "Forfait Standard",
       description: "Pour profiter des deux salles en illimité, 6h-23h, 7j/7",
       color: "#c0c0c0",
       textColor: "#FFFFFF",
@@ -111,7 +102,6 @@ const DataTarifs = {
     },
     {
       title: "Forfait Etudiant/Couple/Association",
-      subTitle: "Pour les noobs",
       description: "Pour profiter des deux salles en illimité, 6h-23h, 7j/7",
       color: "#c0c0c0",
       textColor: "#FFFFFF",
@@ -130,9 +120,8 @@ const DataTarifs = {
   trimestrial: [
     {
       title: "Forfait Trimestriel",
-      subTitle: "Pour les gens qui vont arreter",
       description: "A payer en argent comptant pour les 3mois",
-      color: "#cd7f32",
+      color: "#8e4c00",
       textColor: "#FFFFFF",
       pricing: [
         {
@@ -144,8 +133,7 @@ const DataTarifs = {
   ],
   mensual: [
     {
-      title: "Mensuel",
-      subTitle: "Pour les SDF",
+      title: "Forfait Mensuel",
       description: "Pour profiter des deux salles en illimité, 6h-23h, 7j/7",
       color: "#000000",
       textColor: "#FFFFFF",

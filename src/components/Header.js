@@ -1,11 +1,17 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import { IconButton } from "@material-ui/core";
-import { Home } from "@material-ui/icons";
+import BackToTop from "./BackToTop";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Fab,
+} from "@material-ui/core";
+import { KeyboardArrowUp } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import Facebook from "@material-ui/icons/Facebook";
-import Drawer from "./Drawer";
+import SideDrawer from "./Drawer";
 import Button from "@material-ui/core/Button/Button";
 import Hidden from "@material-ui/core/Hidden";
 
@@ -37,7 +43,7 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <Hidden smUp>
-          <Drawer navLinks={navLinks} />
+          <SideDrawer navLinks={navLinks} />
         </Hidden>
 
         <Typography variant="h6" className={classes.title}>
@@ -51,6 +57,13 @@ const Header = () => {
             </Link>
           ))}
         </Hidden>
+
+        <Toolbar id="back-to-top" />
+        <BackToTop>
+          <Fab color="primary" size="large" aria-label="scroll back to top">
+            <KeyboardArrowUp />
+          </Fab>
+        </BackToTop>
 
         <IconButton
           onClick={redirectToFacebook}
